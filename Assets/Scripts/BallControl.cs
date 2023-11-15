@@ -8,6 +8,8 @@ public class BallControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        var ball = GetComponent<Rigidbody>();
+        ball.useGravity = false;
     }
 
     // Update is called once per frame

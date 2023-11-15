@@ -14,6 +14,7 @@ public class PaddleControl : MonoBehaviour
     [SerializeField] private float maxBallVelocity = 15f;
     [SerializeField] private float constantBallSpeed = 12f;
     [SerializeField] private float maxReflectionAngleDeg = 75f;
+    [SerializeField] private bool useConstantBallSpeed;
     [SerializeField] private Rigidbody ballRb;
     [SerializeField] private InputContainer input;
 
@@ -38,6 +39,14 @@ public class PaddleControl : MonoBehaviour
     private void OnMove(Vector2 input)
     {
         _paddle.velocity = new Vector3(input.x * paddleSpeed, 0, 0);
+    }
+
+    private void FixedUpdate()
+    {
+        if (useConstantBallSpeed)
+        {
+            ballRb.velocity = constantBallSpeed * (ballRb.velocity.normalized);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)

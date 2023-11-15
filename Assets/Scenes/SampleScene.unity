@@ -391,7 +391,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 72
+  m_Constraints: 120
   m_CollisionDetection: 2
 --- !u!135 &745603311
 SphereCollider:
@@ -1068,6 +1068,7 @@ MonoBehaviour:
   maxBallVelocity: 15
   constantBallSpeed: 12
   maxReflectionAngleDeg: 75
+  useConstantBallSpeed: 0
   ballRb: {fileID: 0}
   input: {fileID: 0}
 --- !u!114 &2116257328
@@ -1087,7 +1088,8 @@ MonoBehaviour:
   maxBallVelocity: 20
   constantBallSpeed: 30
   maxReflectionAngleDeg: 75
-  ballRb: {fileID: 0}
+  useConstantBallSpeed: 1
+  ballRb: {fileID: 745603310}
   input: {fileID: 11400000, guid: 61edc43825ca41b769fc96a693310c2f, type: 2}
 --- !u!114 &2116257329
 MonoBehaviour:
@@ -1106,6 +1108,7 @@ MonoBehaviour:
   maxBallVelocity: 15
   constantBallSpeed: 12
   maxReflectionAngleDeg: 75
+  useConstantBallSpeed: 0
   ballRb: {fileID: 0}
   input: {fileID: 0}
 --- !u!54 &2116257336
@@ -1130,7 +1133,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 124
