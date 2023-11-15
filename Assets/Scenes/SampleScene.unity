@@ -2046,7 +2046,7 @@ MonoBehaviour:
   reflectingForce: 2
   maxBallVelocity: 20
   constantBallSpeed: 30
-  maxReflectionAngleDeg: 75
+  maxReflectionAngleDeg: 20
   useConstantBallSpeed: 1
   ballRb: {fileID: 745603310}
   input: {fileID: 11400000, guid: 61edc43825ca41b769fc96a693310c2f, type: 2}
