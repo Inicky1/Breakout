@@ -1010,6 +1010,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -2347029519675839932, guid: e0c55179e0687134e9bb572b2af456aa, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2116257328}
+    - targetCorrespondingSourceObject: {fileID: -2347029519675839932, guid: e0c55179e0687134e9bb572b2af456aa, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2116257336}
     - targetCorrespondingSourceObject: {fileID: 7892651535371845212, guid: e0c55179e0687134e9bb572b2af456aa, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2116257321}
@@ -1066,6 +1069,7 @@ MonoBehaviour:
   constantBallSpeed: 12
   maxReflectionAngleDeg: 75
   ballRb: {fileID: 0}
+  input: {fileID: 0}
 --- !u!114 &2116257328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1084,6 +1088,7 @@ MonoBehaviour:
   constantBallSpeed: 30
   maxReflectionAngleDeg: 75
   ballRb: {fileID: 0}
+  input: {fileID: 11400000, guid: 61edc43825ca41b769fc96a693310c2f, type: 2}
 --- !u!114 &2116257329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1102,6 +1107,34 @@ MonoBehaviour:
   constantBallSpeed: 12
   maxReflectionAngleDeg: 75
   ballRb: {fileID: 0}
+  input: {fileID: 0}
+--- !u!54 &2116257336
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116257318}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 124
+  m_CollisionDetection: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

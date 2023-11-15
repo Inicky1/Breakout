@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 public class PaddleControl : MonoBehaviour
@@ -14,6 +15,9 @@ public class PaddleControl : MonoBehaviour
     [SerializeField] private float constantBallSpeed = 12f;
     [SerializeField] private float maxReflectionAngleDeg = 75f;
     [SerializeField] private Rigidbody ballRb;
+    [SerializeField] private InputContainer input;
+
+    private Rigidbody _paddle;
     
     
     
@@ -21,7 +25,8 @@ public class PaddleControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        _paddle = GetComponent<Rigidbody>();
+        input.Current.InGame.Move.performed += context => OnMove(context.ReadValue<Vector2>());
     }
 
     // Update is called once per frame
@@ -30,15 +35,9 @@ public class PaddleControl : MonoBehaviour
         
     }
 
-    private void FixedUpdate()
+    private void OnMove(Vector2 input)
     {
-        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
-        {
-            float horizontal = Input.GetAxis("Horizontal");
-            Vector3 newPosition = transform.position + new Vector3(horizontal * paddleSpeed * Time.deltaTime, 0, 0);
-
-            transform.position = newPosition;
-        }
+        _paddle.velocity = new Vector3(input.x * paddleSpeed, 0, 0);
     }
 
     private void OnCollisionEnter(Collision collision)
