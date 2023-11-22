@@ -47,8 +47,14 @@ public class PaddleControl : MonoBehaviour
         {
             ballRb.velocity = constantBallSpeed * (ballRb.velocity.normalized);
         }
+        
+        
     }
 
+    private void UpdateEquationPosition()
+    {
+        GameObject.FindGameObjectWithTag("Equation");
+    }
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Ball"))
