@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311924, g: 0.38073963, b: 0.3587269, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1953,6 +1953,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ballVelocity: 5
+  maxReflectionAngleDeg: 75
+  reflectingForce: 3
 --- !u!54 &745603310
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3316,7 +3318,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1385513230}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 587da10792cd82646a7f0f76321f9a2c, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -5109,7 +5111,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1924454538}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 587da10792cd82646a7f0f76321f9a2c, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
