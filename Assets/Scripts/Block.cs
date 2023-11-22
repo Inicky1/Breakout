@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Block : MonoBehaviour
@@ -14,5 +15,10 @@ public class Block : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void OnCollisionEnter(Collision c)
+    {
+        Debug.Log("Collision");
     }
 }

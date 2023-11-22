@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class PaddleControl : MonoBehaviour
@@ -19,9 +21,9 @@ public class PaddleControl : MonoBehaviour
     [SerializeField] private InputContainer input;
 
     private Rigidbody _paddle;
-    
-    
-    
+
+    public Transform target;
+    public TextMeshPro equation;
     
     // Start is called before the first frame update
     void Start()
@@ -35,7 +37,7 @@ public class PaddleControl : MonoBehaviour
     {
         
     }
-
+    
     private void OnMove(Vector2 input)
     {
         _paddle.velocity = new Vector3(input.x * paddleSpeed, 0, 0);
@@ -47,13 +49,13 @@ public class PaddleControl : MonoBehaviour
         {
             ballRb.velocity = constantBallSpeed * (ballRb.velocity.normalized);
         }
-        
-        
+        UpdateEquationPosition();
     }
 
     private void UpdateEquationPosition()
     {
-        GameObject.FindGameObjectWithTag("Equation");
+        // GameObject.FindGameObjectWithTag("Equation").GetComponent(RectTransform).transform.position.x
+
     }
     private void OnCollisionEnter(Collision collision)
     {
