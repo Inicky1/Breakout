@@ -43,7 +43,7 @@ public class Block : MonoBehaviour
 
             Destroy(source, explosionClip.length + 0.1f);
 
-            if (Random.Range(0, 100) < 50)
+                if (Random.Range(0, 100) < 75)
             {
                 float x = Mathf.Ceil(Random.Range(0f, 100f));
 
