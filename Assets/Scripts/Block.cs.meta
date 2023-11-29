@@ -3,7 +3,11 @@ guid: d08df57feda54b04e988dfba56b4c2ce
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - explosionClip: {fileID: 8300000, guid: 150753fc33a12054a828bfd02b3d925f, type: 3}
+  - hitClip: {fileID: 8300000, guid: cd79e8c9a13f775d9b487597402667ec, type: 3}
+  - explosionMixerGroup: {fileID: 4473413088089344123, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  - hitMixerGroup: {fileID: -5921144444781087303, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
