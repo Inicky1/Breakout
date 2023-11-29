@@ -2,7 +2,12 @@ fileFormatVersion: 2
 guid: f395d4a886f79824b9a67d4724697a64
 ScriptedImporter:
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Subdivision_Surface/Subdivision_SurfaceCube/Subdivision_SurfaceCubeShape:000:'
+    second: {fileID: 2100000, guid: 829fe14d832e2889bb384d3a73059983, type: 2}
   serializedVersion: 2
   userData: 
   assetBundleName: 
