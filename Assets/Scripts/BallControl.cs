@@ -3,7 +3,7 @@ using UnityEngine;
 public class BallControl : MonoBehaviour
 {
     [SerializeField] private float ballVelocity = 5f;
-    
+    [SerializeField] private bool allowContinuousMovement = true;
     
     // Start is called before the first frame update
     void Start()

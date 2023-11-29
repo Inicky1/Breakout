@@ -50,6 +50,11 @@ public class PaddleControl : MonoBehaviour
         UpdateEquationPosition();
     }
 
+    public void ChangeUseConstantBallSpeed(bool value)
+    {
+        useConstantBallSpeed = value;
+    }
+
     private void UpdateEquationPosition()
     {
         // GameObject.FindGameObjectWithTag("Equation").GetComponent(RectTransform).transform.position.x
@@ -94,7 +99,7 @@ public class PaddleControl : MonoBehaviour
     public void SetNewBallRigidBody()
     {
         ballRb = GameObject.FindGameObjectWithTag("Ball").GetComponent<Rigidbody>();
-        ballRb.velocity = Vector3.zero;
+        //ballRb.velocity = Vector3.zero;
         ballRb.useGravity = false;
         Invoke(nameof(InitialDownPush), 2f);
     }
