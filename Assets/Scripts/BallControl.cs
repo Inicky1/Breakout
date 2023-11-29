@@ -22,6 +22,8 @@ public class BallControl : MonoBehaviour
     public void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Block")) return;
-        gameObject.GetComponent<AudioSource>().Play();
+        var audioSource = gameObject.GetComponent<AudioSource>();
+        audioSource.pitch = Random.Range(0.9f, 1.1f);
+        audioSource.Play();
     }
 }
