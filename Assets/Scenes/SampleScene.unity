@@ -238,7 +238,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionClip: {fileID: 8300000, guid: 150753fc33a12054a828bfd02b3d925f, type: 3}
-  mixerGroup: {fileID: -6403527465966360774, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitClip: {fileID: 8300000, guid: cd79e8c9a13f775d9b487597402667ec, type: 3}
+  explosionMixerGroup: {fileID: 4473413088089344123, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitMixerGroup: {fileID: -5921144444781087303, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitPoints: 2
 --- !u!1001 &46436477
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -354,7 +357,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionClip: {fileID: 8300000, guid: 150753fc33a12054a828bfd02b3d925f, type: 3}
-  mixerGroup: {fileID: -6403527465966360774, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitClip: {fileID: 8300000, guid: cd79e8c9a13f775d9b487597402667ec, type: 3}
+  explosionMixerGroup: {fileID: 4473413088089344123, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitMixerGroup: {fileID: -5921144444781087303, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitPoints: 1
 --- !u!1001 &58431496
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -470,7 +476,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionClip: {fileID: 8300000, guid: 150753fc33a12054a828bfd02b3d925f, type: 3}
-  mixerGroup: {fileID: -6403527465966360774, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitClip: {fileID: 8300000, guid: cd79e8c9a13f775d9b487597402667ec, type: 3}
+  explosionMixerGroup: {fileID: 4473413088089344123, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitMixerGroup: {fileID: -5921144444781087303, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitPoints: 3
 --- !u!1001 &76588847
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -586,7 +595,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionClip: {fileID: 8300000, guid: 150753fc33a12054a828bfd02b3d925f, type: 3}
-  mixerGroup: {fileID: -6403527465966360774, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitClip: {fileID: 8300000, guid: cd79e8c9a13f775d9b487597402667ec, type: 3}
+  explosionMixerGroup: {fileID: 4473413088089344123, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitMixerGroup: {fileID: -5921144444781087303, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitPoints: 2
 --- !u!1001 &120072625
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -702,7 +714,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionClip: {fileID: 8300000, guid: 150753fc33a12054a828bfd02b3d925f, type: 3}
-  mixerGroup: {fileID: -6403527465966360774, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitClip: {fileID: 8300000, guid: cd79e8c9a13f775d9b487597402667ec, type: 3}
+  explosionMixerGroup: {fileID: 4473413088089344123, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitMixerGroup: {fileID: -5921144444781087303, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitPoints: 3
 --- !u!1001 &326338322
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -818,7 +833,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionClip: {fileID: 8300000, guid: 150753fc33a12054a828bfd02b3d925f, type: 3}
-  mixerGroup: {fileID: -6403527465966360774, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitClip: {fileID: 8300000, guid: cd79e8c9a13f775d9b487597402667ec, type: 3}
+  explosionMixerGroup: {fileID: 4473413088089344123, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitMixerGroup: {fileID: -5921144444781087303, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitPoints: 2
 --- !u!1001 &389125448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -934,7 +952,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionClip: {fileID: 8300000, guid: 150753fc33a12054a828bfd02b3d925f, type: 3}
-  mixerGroup: {fileID: -6403527465966360774, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitClip: {fileID: 8300000, guid: cd79e8c9a13f775d9b487597402667ec, type: 3}
+  explosionMixerGroup: {fileID: 4473413088089344123, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitMixerGroup: {fileID: -5921144444781087303, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitPoints: 2
 --- !u!1001 &406737853
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1054,7 +1075,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionClip: {fileID: 8300000, guid: 150753fc33a12054a828bfd02b3d925f, type: 3}
-  mixerGroup: {fileID: -6403527465966360774, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitClip: {fileID: 8300000, guid: cd79e8c9a13f775d9b487597402667ec, type: 3}
+  explosionMixerGroup: {fileID: 4473413088089344123, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitMixerGroup: {fileID: -5921144444781087303, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitPoints: 1
 --- !u!1 &450755934 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4726322583526491095, guid: f395d4a886f79824b9a67d4724697a64, type: 3}
@@ -1099,7 +1123,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionClip: {fileID: 8300000, guid: 150753fc33a12054a828bfd02b3d925f, type: 3}
-  mixerGroup: {fileID: -6403527465966360774, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitClip: {fileID: 8300000, guid: cd79e8c9a13f775d9b487597402667ec, type: 3}
+  explosionMixerGroup: {fileID: 4473413088089344123, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitMixerGroup: {fileID: -5921144444781087303, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitPoints: 1
 --- !u!1001 &535135307
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1215,7 +1242,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionClip: {fileID: 8300000, guid: 150753fc33a12054a828bfd02b3d925f, type: 3}
-  mixerGroup: {fileID: -6403527465966360774, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitClip: {fileID: 8300000, guid: cd79e8c9a13f775d9b487597402667ec, type: 3}
+  explosionMixerGroup: {fileID: 4473413088089344123, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitMixerGroup: {fileID: -5921144444781087303, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitPoints: 1
 --- !u!1001 &621606387
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1331,7 +1361,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionClip: {fileID: 8300000, guid: 150753fc33a12054a828bfd02b3d925f, type: 3}
-  mixerGroup: {fileID: -6403527465966360774, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitClip: {fileID: 8300000, guid: cd79e8c9a13f775d9b487597402667ec, type: 3}
+  explosionMixerGroup: {fileID: 4473413088089344123, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitMixerGroup: {fileID: -5921144444781087303, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitPoints: 2
 --- !u!1 &659169605
 GameObject:
   m_ObjectHideFlags: 0
@@ -1552,7 +1585,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionClip: {fileID: 8300000, guid: 150753fc33a12054a828bfd02b3d925f, type: 3}
-  mixerGroup: {fileID: -6403527465966360774, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitClip: {fileID: 8300000, guid: cd79e8c9a13f775d9b487597402667ec, type: 3}
+  explosionMixerGroup: {fileID: 4473413088089344123, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitMixerGroup: {fileID: -5921144444781087303, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitPoints: 3
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1762,7 +1798,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionClip: {fileID: 8300000, guid: 150753fc33a12054a828bfd02b3d925f, type: 3}
-  mixerGroup: {fileID: -6403527465966360774, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitClip: {fileID: 8300000, guid: cd79e8c9a13f775d9b487597402667ec, type: 3}
+  explosionMixerGroup: {fileID: 4473413088089344123, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitMixerGroup: {fileID: -5921144444781087303, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitPoints: 2
 --- !u!1001 &743425546
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1878,7 +1917,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionClip: {fileID: 8300000, guid: 150753fc33a12054a828bfd02b3d925f, type: 3}
-  mixerGroup: {fileID: -6403527465966360774, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitClip: {fileID: 8300000, guid: cd79e8c9a13f775d9b487597402667ec, type: 3}
+  explosionMixerGroup: {fileID: 4473413088089344123, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitMixerGroup: {fileID: -5921144444781087303, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitPoints: 3
 --- !u!1 &745603306 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3188704276672665356, guid: d29f2c621381bc544ab31b30fdd19f18, type: 3}
@@ -1954,7 +1996,7 @@ AudioSource:
   m_GameObject: {fileID: 745603306}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: -589664846623766903, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  OutputAudioMixerGroup: {fileID: 7889151635060095957, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
   m_audioClip: {fileID: 8300000, guid: 0764cb2d47b1d510ab6c3b631e440c4f, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -2156,7 +2198,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionClip: {fileID: 8300000, guid: 150753fc33a12054a828bfd02b3d925f, type: 3}
-  mixerGroup: {fileID: -6403527465966360774, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitClip: {fileID: 8300000, guid: cd79e8c9a13f775d9b487597402667ec, type: 3}
+  explosionMixerGroup: {fileID: 4473413088089344123, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitMixerGroup: {fileID: -5921144444781087303, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitPoints: 3
 --- !u!1001 &858983361
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2272,7 +2317,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionClip: {fileID: 8300000, guid: 150753fc33a12054a828bfd02b3d925f, type: 3}
-  mixerGroup: {fileID: -6403527465966360774, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitClip: {fileID: 8300000, guid: cd79e8c9a13f775d9b487597402667ec, type: 3}
+  explosionMixerGroup: {fileID: 4473413088089344123, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitMixerGroup: {fileID: -5921144444781087303, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitPoints: 2
 --- !u!1001 &917715206
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2388,7 +2436,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionClip: {fileID: 8300000, guid: 150753fc33a12054a828bfd02b3d925f, type: 3}
-  mixerGroup: {fileID: -6403527465966360774, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitClip: {fileID: 8300000, guid: cd79e8c9a13f775d9b487597402667ec, type: 3}
+  explosionMixerGroup: {fileID: 4473413088089344123, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitMixerGroup: {fileID: -5921144444781087303, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitPoints: 1
 --- !u!1001 &940289043
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2504,7 +2555,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionClip: {fileID: 8300000, guid: 150753fc33a12054a828bfd02b3d925f, type: 3}
-  mixerGroup: {fileID: -6403527465966360774, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitClip: {fileID: 8300000, guid: cd79e8c9a13f775d9b487597402667ec, type: 3}
+  explosionMixerGroup: {fileID: 4473413088089344123, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitMixerGroup: {fileID: -5921144444781087303, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitPoints: 2
 --- !u!1001 &956070730
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2783,7 +2837,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionClip: {fileID: 8300000, guid: 150753fc33a12054a828bfd02b3d925f, type: 3}
-  mixerGroup: {fileID: -6403527465966360774, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitClip: {fileID: 8300000, guid: cd79e8c9a13f775d9b487597402667ec, type: 3}
+  explosionMixerGroup: {fileID: 4473413088089344123, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitMixerGroup: {fileID: -5921144444781087303, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitPoints: 1
 --- !u!1 &1058649582
 GameObject:
   m_ObjectHideFlags: 0
@@ -2969,7 +3026,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionClip: {fileID: 8300000, guid: 150753fc33a12054a828bfd02b3d925f, type: 3}
-  mixerGroup: {fileID: -6403527465966360774, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitClip: {fileID: 8300000, guid: cd79e8c9a13f775d9b487597402667ec, type: 3}
+  explosionMixerGroup: {fileID: 4473413088089344123, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitMixerGroup: {fileID: -5921144444781087303, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitPoints: 1
 --- !u!1001 &1142795343
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3085,7 +3145,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionClip: {fileID: 8300000, guid: 150753fc33a12054a828bfd02b3d925f, type: 3}
-  mixerGroup: {fileID: -6403527465966360774, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitClip: {fileID: 8300000, guid: cd79e8c9a13f775d9b487597402667ec, type: 3}
+  explosionMixerGroup: {fileID: 4473413088089344123, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitMixerGroup: {fileID: -5921144444781087303, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitPoints: 1
 --- !u!1001 &1368544190
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3201,7 +3264,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionClip: {fileID: 8300000, guid: 150753fc33a12054a828bfd02b3d925f, type: 3}
-  mixerGroup: {fileID: -6403527465966360774, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitClip: {fileID: 8300000, guid: cd79e8c9a13f775d9b487597402667ec, type: 3}
+  explosionMixerGroup: {fileID: 4473413088089344123, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitMixerGroup: {fileID: -5921144444781087303, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitPoints: 3
 --- !u!1 &1385513230
 GameObject:
   m_ObjectHideFlags: 0
@@ -3422,7 +3488,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionClip: {fileID: 8300000, guid: 150753fc33a12054a828bfd02b3d925f, type: 3}
-  mixerGroup: {fileID: -6403527465966360774, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitClip: {fileID: 8300000, guid: cd79e8c9a13f775d9b487597402667ec, type: 3}
+  explosionMixerGroup: {fileID: 4473413088089344123, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitMixerGroup: {fileID: -5921144444781087303, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitPoints: 2
 --- !u!1001 &1479867266
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3615,7 +3684,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionClip: {fileID: 8300000, guid: 150753fc33a12054a828bfd02b3d925f, type: 3}
-  mixerGroup: {fileID: -6403527465966360774, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitClip: {fileID: 8300000, guid: cd79e8c9a13f775d9b487597402667ec, type: 3}
+  explosionMixerGroup: {fileID: 4473413088089344123, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitMixerGroup: {fileID: -5921144444781087303, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitPoints: 1
 --- !u!1001 &1559306041
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3731,7 +3803,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionClip: {fileID: 8300000, guid: 150753fc33a12054a828bfd02b3d925f, type: 3}
-  mixerGroup: {fileID: -6403527465966360774, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitClip: {fileID: 8300000, guid: cd79e8c9a13f775d9b487597402667ec, type: 3}
+  explosionMixerGroup: {fileID: 4473413088089344123, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitMixerGroup: {fileID: -5921144444781087303, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitPoints: 2
 --- !u!1001 &1559898783
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3847,7 +3922,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionClip: {fileID: 8300000, guid: 150753fc33a12054a828bfd02b3d925f, type: 3}
-  mixerGroup: {fileID: -6403527465966360774, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitClip: {fileID: 8300000, guid: cd79e8c9a13f775d9b487597402667ec, type: 3}
+  explosionMixerGroup: {fileID: 4473413088089344123, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitMixerGroup: {fileID: -5921144444781087303, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitPoints: 1
 --- !u!1001 &1564699530
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3963,7 +4041,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionClip: {fileID: 8300000, guid: 150753fc33a12054a828bfd02b3d925f, type: 3}
-  mixerGroup: {fileID: -6403527465966360774, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitClip: {fileID: 8300000, guid: cd79e8c9a13f775d9b487597402667ec, type: 3}
+  explosionMixerGroup: {fileID: 4473413088089344123, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitMixerGroup: {fileID: -5921144444781087303, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitPoints: 1
 --- !u!1001 &1565529057
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4079,7 +4160,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionClip: {fileID: 8300000, guid: 150753fc33a12054a828bfd02b3d925f, type: 3}
-  mixerGroup: {fileID: -6403527465966360774, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitClip: {fileID: 8300000, guid: cd79e8c9a13f775d9b487597402667ec, type: 3}
+  explosionMixerGroup: {fileID: 4473413088089344123, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitMixerGroup: {fileID: -5921144444781087303, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitPoints: 3
 --- !u!1001 &1583961919
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4195,7 +4279,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionClip: {fileID: 8300000, guid: 150753fc33a12054a828bfd02b3d925f, type: 3}
-  mixerGroup: {fileID: -6403527465966360774, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitClip: {fileID: 8300000, guid: cd79e8c9a13f775d9b487597402667ec, type: 3}
+  explosionMixerGroup: {fileID: 4473413088089344123, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitMixerGroup: {fileID: -5921144444781087303, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitPoints: 2
 --- !u!1001 &1637807163
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4311,7 +4398,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionClip: {fileID: 8300000, guid: 150753fc33a12054a828bfd02b3d925f, type: 3}
-  mixerGroup: {fileID: -6403527465966360774, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitClip: {fileID: 8300000, guid: cd79e8c9a13f775d9b487597402667ec, type: 3}
+  explosionMixerGroup: {fileID: 4473413088089344123, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitMixerGroup: {fileID: -5921144444781087303, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitPoints: 3
 --- !u!1001 &1719479411
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4427,7 +4517,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionClip: {fileID: 8300000, guid: 150753fc33a12054a828bfd02b3d925f, type: 3}
-  mixerGroup: {fileID: -6403527465966360774, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitClip: {fileID: 8300000, guid: cd79e8c9a13f775d9b487597402667ec, type: 3}
+  explosionMixerGroup: {fileID: 4473413088089344123, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitMixerGroup: {fileID: -5921144444781087303, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitPoints: 2
 --- !u!1 &1732196723
 GameObject:
   m_ObjectHideFlags: 0
@@ -4714,7 +4807,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionClip: {fileID: 8300000, guid: 150753fc33a12054a828bfd02b3d925f, type: 3}
-  mixerGroup: {fileID: -6403527465966360774, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitClip: {fileID: 8300000, guid: cd79e8c9a13f775d9b487597402667ec, type: 3}
+  explosionMixerGroup: {fileID: 4473413088089344123, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitMixerGroup: {fileID: -5921144444781087303, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitPoints: 3
 --- !u!1001 &1758873971
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4830,7 +4926,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionClip: {fileID: 8300000, guid: 150753fc33a12054a828bfd02b3d925f, type: 3}
-  mixerGroup: {fileID: -6403527465966360774, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitClip: {fileID: 8300000, guid: cd79e8c9a13f775d9b487597402667ec, type: 3}
+  explosionMixerGroup: {fileID: 4473413088089344123, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitMixerGroup: {fileID: -5921144444781087303, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitPoints: 3
 --- !u!1001 &1765375313
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4946,7 +5045,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionClip: {fileID: 8300000, guid: 150753fc33a12054a828bfd02b3d925f, type: 3}
-  mixerGroup: {fileID: -6403527465966360774, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitClip: {fileID: 8300000, guid: cd79e8c9a13f775d9b487597402667ec, type: 3}
+  explosionMixerGroup: {fileID: 4473413088089344123, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitMixerGroup: {fileID: -5921144444781087303, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitPoints: 3
 --- !u!1 &1924454538
 GameObject:
   m_ObjectHideFlags: 0
@@ -5167,7 +5269,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionClip: {fileID: 8300000, guid: 150753fc33a12054a828bfd02b3d925f, type: 3}
-  mixerGroup: {fileID: -6403527465966360774, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitClip: {fileID: 8300000, guid: cd79e8c9a13f775d9b487597402667ec, type: 3}
+  explosionMixerGroup: {fileID: 4473413088089344123, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitMixerGroup: {fileID: -5921144444781087303, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitPoints: 1
 --- !u!1001 &1974844431
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5283,7 +5388,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionClip: {fileID: 8300000, guid: 150753fc33a12054a828bfd02b3d925f, type: 3}
-  mixerGroup: {fileID: -6403527465966360774, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitClip: {fileID: 8300000, guid: cd79e8c9a13f775d9b487597402667ec, type: 3}
+  explosionMixerGroup: {fileID: 4473413088089344123, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitMixerGroup: {fileID: -5921144444781087303, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitPoints: 1
 --- !u!1001 &2070950921
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5399,7 +5507,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionClip: {fileID: 8300000, guid: 150753fc33a12054a828bfd02b3d925f, type: 3}
-  mixerGroup: {fileID: -6403527465966360774, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitClip: {fileID: 8300000, guid: cd79e8c9a13f775d9b487597402667ec, type: 3}
+  explosionMixerGroup: {fileID: 4473413088089344123, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitMixerGroup: {fileID: -5921144444781087303, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitPoints: 3
 --- !u!1 &2083262216
 GameObject:
   m_ObjectHideFlags: 0
@@ -5736,7 +5847,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionClip: {fileID: 8300000, guid: 150753fc33a12054a828bfd02b3d925f, type: 3}
-  mixerGroup: {fileID: -6403527465966360774, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitClip: {fileID: 8300000, guid: cd79e8c9a13f775d9b487597402667ec, type: 3}
+  explosionMixerGroup: {fileID: 4473413088089344123, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitMixerGroup: {fileID: -5921144444781087303, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitPoints: 2
 --- !u!1001 &2144058864
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5852,7 +5966,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionClip: {fileID: 8300000, guid: 150753fc33a12054a828bfd02b3d925f, type: 3}
-  mixerGroup: {fileID: -6403527465966360774, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitClip: {fileID: 8300000, guid: cd79e8c9a13f775d9b487597402667ec, type: 3}
+  explosionMixerGroup: {fileID: 4473413088089344123, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitMixerGroup: {fileID: -5921144444781087303, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  hitPoints: 3
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
