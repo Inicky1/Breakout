@@ -62,10 +62,10 @@ public class PaddleControl : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        updateEquation();
+        
         if (collision.gameObject.CompareTag("Number"))
         {
-            Debug.Log("Number Catch");
+            updateEquation();
         }
         if (collision.gameObject.CompareTag("Ball"))
         {
