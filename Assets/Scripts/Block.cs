@@ -1,6 +1,8 @@
+using System;
 using UnityEngine;
 using UnityEngine.Audio;
 using TMPro;
+using Random = UnityEngine.Random;
 
 public class Block : MonoBehaviour
 {
@@ -18,6 +20,17 @@ public class Block : MonoBehaviour
     [SerializeField]
     private GameObject number;
 
+    private MeshRenderer _mesh;
+    private Material _material;
+
+    private void Start()
+    {
+        //Change the color of the block with the hitpoints
+        _mesh = GetComponentInChildren<MeshRenderer>();
+        _material = _mesh.material;
+        _material.color = Color.Lerp(Color.white, Color.red, (float)hitPoints / 3);
+    }
+
     private void OnCollisionEnter(Collision c)
     {
         hitPoints--;
@@ -30,6 +43,8 @@ public class Block : MonoBehaviour
             source.Play();
 
             Destroy(source, hitClip.length + 0.1f);
+
+            _material.color = Color.Lerp(Color.white, Color.red, (float)hitPoints / 3);
         }
         else
         {
@@ -43,7 +58,7 @@ public class Block : MonoBehaviour
 
             Destroy(source, explosionClip.length + 0.1f);
 
-                if (Random.Range(0, 100) < 75)
+            if (Random.Range(0, 100) < 75)
             {
                 float x = Mathf.Ceil(Random.Range(0f, 100f));
 
