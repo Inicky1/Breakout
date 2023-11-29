@@ -5700,7 +5700,7 @@ MonoBehaviour:
   input: {fileID: 11400000, guid: 61edc43825ca41b769fc96a693310c2f, type: 2}
   a: 0
   b: 0
-  equation: {fileID: 0}
+  equation: {fileID: 3112317890507383326, guid: a7494fed32c844c4cad4a2165495ebd4, type: 3}
   number: {fileID: 3224337592727805904, guid: cc7dbb4453540ea4fb84af7ceca2b852, type: 3}
   fallingNumber: {fileID: 1442805268170251520, guid: cc7dbb4453540ea4fb84af7ceca2b852, type: 3}
   target: {fileID: 2116257338}
