@@ -8,8 +8,8 @@ public class BallControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        var ball = GetComponent<Rigidbody>();
-        ball.useGravity = false;
+        //var ball = GetComponent<Rigidbody>();
+        //ball.useGravity = false;
     }
 
     // Update is called once per frame
@@ -25,8 +25,7 @@ public class BallControl : MonoBehaviour
 
     public void OnCollisionEnter(Collision other)
     {
-        // Quaternion newRotation = this.transform.rotation;
-        // newRotation.z = -newRotation.z;
-        // transform.rotation = newRotation;
+        if (other.gameObject.CompareTag("Block")) return;
+        gameObject.GetComponent<AudioSource>().Play();
     }
 }
