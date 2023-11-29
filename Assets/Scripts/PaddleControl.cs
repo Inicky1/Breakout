@@ -5,6 +5,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
+using Object = UnityEngine.Object;
 using Random = UnityEngine.Random;
 
 public class PaddleControl : MonoBehaviour
@@ -22,12 +24,19 @@ public class PaddleControl : MonoBehaviour
 
     private Rigidbody _paddle;
 
+    public float a;
+    public float b;
+    public TMP_Text equation;
+    
+    public GameObject number;
+    public TMP_Text fallingNumber;
+
     public Transform target;
-    public TextMeshPro equation;
     
     // Start is called before the first frame update
     void Start()
     {
+        InvokeRepeating("SpawnNumber", 1, 3);
         _paddle = GetComponent<Rigidbody>();
         input.Current.InGame.Move.performed += context => OnMove(context.ReadValue<Vector2>());
     }
@@ -36,6 +45,15 @@ public class PaddleControl : MonoBehaviour
     void Update()
     {
         
+    }
+    
+    public void SpawnNumber()
+    {
+        float x = Mathf.Ceil(Random.Range(0f, 100f));
+        fallingNumber.SetText(x.ToString());
+        Console.WriteLine("Spawned number");
+        Vector3 pos = new Vector3(Random.Range(-30f, 30f), Random.Range(50f, 100f), 0);
+        Instantiate(number);
     }
     
     private void OnMove(Vector2 input)
@@ -59,6 +77,7 @@ public class PaddleControl : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
+        updateEquation();
         if (collision.gameObject.CompareTag("Ball"))
         {
             Rigidbody ballRb = collision.gameObject.GetComponent<Rigidbody>();
@@ -101,6 +120,13 @@ public class PaddleControl : MonoBehaviour
     {
         ballRb.useGravity = true;
         ballRb.AddForce(new Vector2(Random.Range(-0.5f, 0.5f), -1f).normalized * 5f, ForceMode.Impulse);
+    }
+
+    public void updateEquation()
+    {
+        a = Mathf.Ceil(Random.Range(0f, 50f));
+        b = Mathf.Ceil(Random.Range(0f, 50f));
+        equation.SetText( a + " + " + b + " = ?");
     }
 
 

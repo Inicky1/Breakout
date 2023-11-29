@@ -8,6 +8,7 @@ TagManager:
   - Wall
   - Equation
   - Block
+  - Number
   layers:
   - Default
   - TransparentFX

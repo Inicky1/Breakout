@@ -17,11 +17,7 @@ public class BallControl : MonoBehaviour
     {
 
     }
-
-    private void FixedUpdate()
-    {
-        transform.position += transform.up * Time.deltaTime;
-    }
+    
 
     public void OnCollisionEnter(Collision other)
     {

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +14,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private Vector3 paddleStartPos;
     [SerializeField] private PaddleControl paddle;
     [SerializeField] private Canvas gameOverScreen;
+
     
     
     // Start is called before the first frame update
@@ -20,6 +22,7 @@ public class GameController : MonoBehaviour
     {
         SpawnNewBall();
         InvokeRepeating("CheckForEndOfGame", 20, 3);
+
     }
 
     // Update is called once per frame
@@ -31,6 +34,8 @@ public class GameController : MonoBehaviour
             Time.timeScale = 0;
         }
     }
+
+
 
     public void LooseALife()
     {
