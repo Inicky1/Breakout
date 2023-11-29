@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4644,12 +4644,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_renderer: {fileID: 1732196726}
-  m_maskType: 0
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 1732196726}
+  m_maskType: 0
 --- !u!23 &1732196726
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5698,8 +5698,12 @@ MonoBehaviour:
   useConstantBallSpeed: 1
   ballRb: {fileID: 745603310}
   input: {fileID: 11400000, guid: 61edc43825ca41b769fc96a693310c2f, type: 2}
-  target: {fileID: 2116257338}
+  a: 0
+  b: 0
   equation: {fileID: 0}
+  number: {fileID: 3224337592727805904, guid: cc7dbb4453540ea4fb84af7ceca2b852, type: 3}
+  fallingNumber: {fileID: 1442805268170251520, guid: cc7dbb4453540ea4fb84af7ceca2b852, type: 3}
+  target: {fileID: 2116257338}
 --- !u!54 &2116257336
 Rigidbody:
   m_ObjectHideFlags: 0
