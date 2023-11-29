@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Audio;
+using TMPro;
 
 public class Block : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class Block : MonoBehaviour
     private AudioMixerGroup hitMixerGroup;
     [SerializeField]
     private int hitPoints;
+    [SerializeField]
+    private GameObject number;
 
     private void OnCollisionEnter(Collision c)
     {
@@ -39,6 +42,15 @@ public class Block : MonoBehaviour
             source.Play();
 
             Destroy(source, explosionClip.length + 0.1f);
+
+            if (Random.Range(0, 100) < 50)
+            {
+                float x = Mathf.Ceil(Random.Range(0f, 100f));
+
+                number.GetComponent<TMP_Text>().text = x.ToString();
+                Vector3 pos = gameObject.transform.position;
+                Instantiate(number, pos, Quaternion.identity);
+            }
         }
     }
 

@@ -28,34 +28,13 @@ public class PaddleControl : MonoBehaviour
     public float b;
     public TMP_Text equation;
     
-    public GameObject number;
-    public TMP_Text fallingNumber;
-
-    public Transform target;
-    
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("SpawnNumber", 1, 3);
         _paddle = GetComponent<Rigidbody>();
         input.Current.InGame.Move.performed += context => OnMove(context.ReadValue<Vector2>());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    
-    public void SpawnNumber()
-    {
-        float x = Mathf.Ceil(Random.Range(0f, 100f));
-        fallingNumber.SetText(x.ToString());
-        Console.WriteLine("Spawned number");
-        Vector3 pos = new Vector3(Random.Range(-30f, 30f), Random.Range(50f, 100f), 0);
-        Instantiate(number);
-    }
-    
     private void OnMove(Vector2 input)
     {
         _paddle.velocity = new Vector3(input.x * paddleSpeed, 0, 0);
