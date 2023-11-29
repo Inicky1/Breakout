@@ -31,6 +31,7 @@ public class PaddleControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         _paddle = GetComponent<Rigidbody>();
         input.Current.InGame.Move.performed += context => OnMove(context.ReadValue<Vector2>());
     }
@@ -56,6 +57,7 @@ public class PaddleControl : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
+        Console.WriteLine("collision");
         updateEquation();
         if (collision.gameObject.CompareTag("Ball"))
         {
@@ -101,8 +103,9 @@ public class PaddleControl : MonoBehaviour
         ballRb.AddForce(new Vector2(Random.Range(-0.5f, 0.5f), -1f).normalized * 5f, ForceMode.Impulse);
     }
 
-    public void updateEquation()
+    private void updateEquation()
     {
+        Debug.Log("Equation Update");
         a = Mathf.Ceil(Random.Range(0f, 50f));
         b = Mathf.Ceil(Random.Range(0f, 50f));
         equation.SetText( a + " + " + b + " = ?");
