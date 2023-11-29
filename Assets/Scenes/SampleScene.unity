@@ -5668,6 +5668,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Paddle
       objectReference: {fileID: 0}
+    - target: {fileID: -2347029519675839932, guid: e0c55179e0687134e9bb572b2af456aa, type: 3}
+      propertyPath: m_TagString
+      value: Paddle
+      objectReference: {fileID: 0}
     - target: {fileID: 4568846759471016601, guid: e0c55179e0687134e9bb572b2af456aa, type: 3}
       propertyPath: m_Mesh
       value: 

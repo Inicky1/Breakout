@@ -57,8 +57,11 @@ public class PaddleControl : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        Console.WriteLine("collision");
         updateEquation();
+        if (collision.gameObject.CompareTag("Number"))
+        {
+            Debug.Log("Number Catch");
+        }
         if (collision.gameObject.CompareTag("Ball"))
         {
             Rigidbody ballRb = collision.gameObject.GetComponent<Rigidbody>();

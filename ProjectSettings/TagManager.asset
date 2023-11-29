@@ -9,6 +9,7 @@ TagManager:
   - Equation
   - Block
   - Number
+  - Paddle
   layers:
   - Default
   - TransparentFX
