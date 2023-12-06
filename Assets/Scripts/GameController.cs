@@ -15,40 +15,37 @@ public class GameController : MonoBehaviour
     [SerializeField] private Vector3 ballStartPos = new Vector3(-0.67f, 22f, 0f);
     [SerializeField] private Vector3 paddleStartPos = new Vector3(1.28f, 1f, 0f);
     [SerializeField] private PaddleControl paddle;
-    [SerializeField] private Canvas gameOverScreen;
+
     [SerializeField] private GameObject ballObject;
 
+    private GameOverScreen gameOverScreen;
     [SerializeField] private PaddleControl paddleControl;
 
     // Start is called before the first frame update
     private Renderer ballRenderer;
-   
+
+
     private void Start()
     {
-     ballObject = GameObject.FindGameObjectWithTag("Ball");
+        ballObject = GameObject.FindGameObjectWithTag("Ball");
         paddleControl = FindObjectOfType<PaddleControl>();
 
         ballRenderer = GetComponent<Renderer>();
         InvokeRepeating("CheckForEndOfGame", 20, 3);
-
     }
 
     // Update is called once per frame
     private void Update()
     {
-
         // if (lives == 0)
         // {
-        //     gameOverScreen.GetComponent<Canvas>().enabled = true;
-        //     Time.timeScale = 0;
+        //     GameOverScreen.Setup();
         // }
     }
 
 
-
     private void OnBecameInvisible()
     {
-
         LooseALife();
     }
 
@@ -64,8 +61,8 @@ public class GameController : MonoBehaviour
 
     public void ResetBallAndPaddle()
     {
-       var ballRb = GameObject.FindGameObjectWithTag("Ball").GetComponent<Rigidbody>();
-       ballObject.GetComponent<MeshRenderer>().enabled = false;
+        var ballRb = GameObject.FindGameObjectWithTag("Ball").GetComponent<Rigidbody>();
+        ballObject.GetComponent<MeshRenderer>().enabled = false;
         if (ballObject != null)
         {
             paddleControl.ChangeUseConstantBallSpeed(false);
@@ -77,7 +74,8 @@ public class GameController : MonoBehaviour
         {
             Instantiate(ballPrefab, ballStartPos, Quaternion.identity);
         }
-         paddleControl.ChangeUseConstantBallSpeed(true);
+
+        paddleControl.ChangeUseConstantBallSpeed(true);
 
         paddle.transform.position = paddleStartPos;
         ballObject.GetComponent<MeshRenderer>().enabled = true;
