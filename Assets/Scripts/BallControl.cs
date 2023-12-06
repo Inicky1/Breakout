@@ -1,10 +1,12 @@
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class BallControl : MonoBehaviour
 {
     [SerializeField] private float ballVelocity = 5f;
     [SerializeField] private bool allowContinuousMovement = true;
-    
+
+    [SerializeField] private PlayableDirector player;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,5 +27,6 @@ public class BallControl : MonoBehaviour
         var audioSource = gameObject.GetComponent<AudioSource>();
         audioSource.pitch = Random.Range(0.9f, 1.1f);
         audioSource.Play();
+        player.Play();
     }
 }

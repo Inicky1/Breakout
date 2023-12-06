@@ -74,10 +74,8 @@ public class PaddleControl : MonoBehaviour
             if (collision.gameObject.GetComponent<TextMeshPro>().text == answer.ToString())
             {
                 updateEquation();
-                _material.color = Color.green;
                 _points++;
-                Debug.Log(_material.color);
-                Debug.Log(GetComponentInChildren<MeshRenderer>().material.color);
+
             }
             collision.gameObject.GetComponent<Rigidbody>().AddForce(Random.Range(-20f, 20f), 20f, 30f, ForceMode.Impulse);
             collision.gameObject.GetComponent<Rigidbody>().AddTorque(Random.Range(-20f, 20f), 20f, 30f, ForceMode.Impulse);
@@ -111,6 +109,14 @@ public class PaddleControl : MonoBehaviour
         }
     }
 
+    private IEnumerator changeColor()
+    {
+        _material.color = Color.green;
+
+        yield return new WaitForSeconds(0.3f);
+
+        _material.color = Color.white;
+    }
     public void SetNewBallRigidBody()
     {
         ballRb = GameObject.FindGameObjectWithTag("Ball").GetComponent<Rigidbody>();
