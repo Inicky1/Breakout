@@ -87,8 +87,14 @@ public class PaddleControl : MonoBehaviour
             {
                 updateEquation();
                 collision.gameObject.GetComponent<TextMeshPro>().color = Color.green;
-                StartCoroutine(changeColor());
+                StartCoroutine(changeColor(true));
                 _points++;
+
+            }
+            else
+            {
+                collision.gameObject.GetComponent<TextMeshPro>().color = Color.red;
+                StartCoroutine(changeColor(false));
 
             }
             collision.gameObject.GetComponent<Rigidbody>().AddForce(Random.Range(-20f, 20f), 20f, 30f, ForceMode.Impulse);
@@ -125,9 +131,16 @@ public class PaddleControl : MonoBehaviour
         }
     }
 
-    private IEnumerator changeColor()
+    private IEnumerator changeColor(bool correct)
     {
-        _material.color = Color.green;
+        if (correct)
+        {
+            _material.color = Color.green;
+        }
+        else
+        {
+            _material.color = Color.red;
+        }
 
         yield return new WaitForSeconds(1);
 
