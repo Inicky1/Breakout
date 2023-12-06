@@ -77,7 +77,9 @@ public class Block : MonoBehaviour
 
                 number.GetComponent<TMP_Text>().text = x.ToString();
                 Vector3 pos = gameObject.transform.position;
-                Instantiate(number, pos, Quaternion.identity);
+                var inst = Instantiate(number, pos, Quaternion.identity);
+
+                Destroy(inst, 10);
             }
         }
     }
