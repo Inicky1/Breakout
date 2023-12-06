@@ -26,6 +26,8 @@ public class PaddleControl : MonoBehaviour
 
     [SerializeField] private PlayableDirector player;
 
+    public ParticleSystem sparks;
+
     private Rigidbody _paddle;
     public int _points=0;
     private Material _material;
@@ -103,7 +105,10 @@ public class PaddleControl : MonoBehaviour
         if (collision.gameObject.CompareTag("Ball"))
         {
             Rigidbody ballRb = collision.gameObject.GetComponent<Rigidbody>();
-
+            
+            Vector3 pos = gameObject.transform.position;
+            Instantiate(sparks, pos, Quaternion.identity);
+            sparks.Play();
             player.Play();
 
             if (ballRb)
