@@ -68,8 +68,8 @@ public class GameController : MonoBehaviour
             
             paddleControl.ChangeUseConstantBallSpeed(false);
             ballObject.transform.position = ballStartPos;
-            ballRb.velocity = Vector3.zero;
-            Debug.Log(ballObject.transform.position);
+            ballRb.velocity = Vector3.zero; 
+            
         }
         else
         {

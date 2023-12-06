@@ -23,7 +23,6 @@ public class NumberBehavior : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Paddle"))
         {
-            Debug.Log("NumberCollide");
             number.GetComponent<Rigidbody>().AddForce(10f, 10f, 10f);
         }
 

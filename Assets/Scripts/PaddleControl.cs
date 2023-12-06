@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Playables;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
@@ -21,6 +22,8 @@ public class PaddleControl : MonoBehaviour
     [SerializeField] private bool useConstantBallSpeed;
     [SerializeField] private Rigidbody ballRb;
     [SerializeField] private InputContainer input;
+    
+    [SerializeField] private PlayableDirector player;
 
     private Rigidbody _paddle;
     public int _points=0;
@@ -74,6 +77,8 @@ public class PaddleControl : MonoBehaviour
             if (collision.gameObject.GetComponent<TextMeshPro>().text == answer.ToString())
             {
                 updateEquation();
+                collision.gameObject.GetComponent<TextMeshPro>().color = Color.green;
+                StartCoroutine(changeColor());
                 _points++;
 
             }
@@ -83,6 +88,8 @@ public class PaddleControl : MonoBehaviour
         if (collision.gameObject.CompareTag("Ball"))
         {
             Rigidbody ballRb = collision.gameObject.GetComponent<Rigidbody>();
+            
+            player.Play();
 
             if (ballRb)
             {
@@ -112,10 +119,11 @@ public class PaddleControl : MonoBehaviour
     private IEnumerator changeColor()
     {
         _material.color = Color.green;
-
-        yield return new WaitForSeconds(0.3f);
-
+        
+        yield return new WaitForSeconds(1);
+        
         _material.color = Color.white;
+        
     }
     public void SetNewBallRigidBody()
     {
@@ -133,8 +141,7 @@ public class PaddleControl : MonoBehaviour
     }
 
     private void updateEquation()
-    {
-        Debug.Log("Equation Update");
+    { 
         A = Random.Range(1, 50);
         B = Random.Range(0, 50);
         equation.SetText( A + " + " + B + " = ?");

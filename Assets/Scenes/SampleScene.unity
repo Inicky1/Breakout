@@ -4834,6 +4834,56 @@ MonoBehaviour:
   paddleControl: {fileID: 2116257328}
   chanceToSpawnNumber: 75
   changeToSpawnRightNumber: 50
+--- !u!1 &1527072665
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1527072667}
+  - component: {fileID: 1527072666}
+  m_Layer: 0
+  m_Name: Bend
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!320 &1527072666
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527072665}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 865c119ebb82cb54ababbc2854e7b285, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings: []
+  m_ExposedReferences:
+    m_References:
+    - 6e380c25756278149a2748195050ffd4: {fileID: 2116257341}
+--- !u!4 &1527072667
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527072665}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1559306041
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6591,6 +6641,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ac3d4c2b9e248a748975c1e6359a2a7f, type: 2}
+    - target: {fileID: 4309632104808162921, guid: e0c55179e0687134e9bb572b2af456aa, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.26999998
+      objectReference: {fileID: 0}
     - target: {fileID: 4568846759471016601, guid: e0c55179e0687134e9bb572b2af456aa, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -6658,6 +6712,7 @@ MonoBehaviour:
   useConstantBallSpeed: 1
   ballRb: {fileID: 745603310}
   input: {fileID: 11400000, guid: 61edc43825ca41b769fc96a693310c2f, type: 2}
+  player: {fileID: 1527072666}
   _points: 0
   equation: {fileID: 1732196725}
 --- !u!54 &2116257336
@@ -6692,6 +6747,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -6398483466595792095, guid: e0c55179e0687134e9bb572b2af456aa, type: 3}
   m_PrefabInstance: {fileID: 2116257317}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2116257341 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -7603307380712304494, guid: e0c55179e0687134e9bb572b2af456aa, type: 3}
+  m_PrefabInstance: {fileID: 2116257317}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116257318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6983ab2008f7a9f499b3f8cd6bec328d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2132880033
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6953,3 +7019,4 @@ SceneRoots:
   - {fileID: 2083262219}
   - {fileID: 1214555321}
   - {fileID: 170757918}
+  - {fileID: 1527072667}
