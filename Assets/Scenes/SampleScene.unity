@@ -1435,7 +1435,7 @@ GameObject:
   - component: {fileID: 615862697}
   - component: {fileID: 615862696}
   m_Layer: 5
-  m_Name: Button
+  m_Name: RestartButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1507,7 +1507,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1455400828}
         m_TargetAssemblyTypeName: GameOverScreen, Assembly-CSharp
-        m_MethodName: PointShopButton
+        m_MethodName: RestartButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4555,7 +4555,7 @@ GameObject:
   - component: {fileID: 1460594885}
   - component: {fileID: 1460594884}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: PointShopButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4627,7 +4627,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1455400828}
         m_TargetAssemblyTypeName: GameOverScreen, Assembly-CSharp
-        m_MethodName: RestartButton
+        m_MethodName: PointShopButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
