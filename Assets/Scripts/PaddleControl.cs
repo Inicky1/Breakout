@@ -24,14 +24,14 @@ public class PaddleControl : MonoBehaviour
 
     private Rigidbody _paddle;
 
-    public float A { get; private set; } = 0;
-    public float B { get; private set; } = 0;
+    public int A { get; private set; } = 0;
+    public int B { get; private set; } = 0;
     public TMP_Text equation;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        updateEquation();
         _paddle = GetComponent<Rigidbody>();
         input.Current.InGame.Move.performed += context => OnMove(context.ReadValue<Vector2>());
     }
@@ -65,7 +65,13 @@ public class PaddleControl : MonoBehaviour
         
         if (collision.gameObject.CompareTag("Number"))
         {
-            updateEquation();
+            var answer = A + B;
+            if (collision.gameObject.GetComponent<TextMeshPro>().text == answer.ToString())
+            {
+                updateEquation();
+            }
+            collision.gameObject.GetComponent<Rigidbody>().AddForce(Random.Range(-20f, 20f), 20f, 30f, ForceMode.Impulse);
+            collision.gameObject.GetComponent<Rigidbody>().AddTorque(Random.Range(-20f, 20f), 20f, 30f, ForceMode.Impulse);
         }
         if (collision.gameObject.CompareTag("Ball"))
         {
@@ -114,8 +120,8 @@ public class PaddleControl : MonoBehaviour
     private void updateEquation()
     {
         Debug.Log("Equation Update");
-        A = Mathf.Ceil(Random.Range(0f, 50f));
-        B = Mathf.Ceil(Random.Range(0f, 50f));
+        A = Random.Range(1, 50);
+        B = Random.Range(0, 50);
         equation.SetText( A + " + " + B + " = ?");
     }
 
