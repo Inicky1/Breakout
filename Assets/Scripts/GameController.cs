@@ -52,7 +52,7 @@ public class GameController : MonoBehaviour
     private void LooseALife()
     {
         lives--;
-        paddle.GetComponent<MeshRenderer>().enabled = false;
+        // paddle.GetComponent<MeshRenderer>().enabled = false;
         if (lives > 0)
         {
             ResetBallAndPaddle();
@@ -80,7 +80,7 @@ public class GameController : MonoBehaviour
 
         paddle.transform.position = paddleStartPos;
         ballObject.GetComponent<MeshRenderer>().enabled = true;
-        paddle.GetComponent<MeshRenderer>().enabled = true;
+        // paddle.GetComponent<MeshRenderer>().enabled = true;
         paddle.SetNewBallRigidBody();
     }
 

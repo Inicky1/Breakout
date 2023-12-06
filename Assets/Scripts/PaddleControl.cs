@@ -76,7 +76,8 @@ public class PaddleControl : MonoBehaviour
                 updateEquation();
                 _material.color = Color.green;
                 _points++;
-                Debug.Log(_points.ToString());
+                Debug.Log(_material.color);
+                Debug.Log(GetComponentInChildren<MeshRenderer>().material.color);
             }
             collision.gameObject.GetComponent<Rigidbody>().AddForce(Random.Range(-20f, 20f), 20f, 30f, ForceMode.Impulse);
             collision.gameObject.GetComponent<Rigidbody>().AddTorque(Random.Range(-20f, 20f), 20f, 30f, ForceMode.Impulse);
