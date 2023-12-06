@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.Playables;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -22,26 +23,34 @@ public class PaddleControl : MonoBehaviour
     [SerializeField] private bool useConstantBallSpeed;
     [SerializeField] private Rigidbody ballRb;
     [SerializeField] private InputContainer input;
-    
+
     [SerializeField] private PlayableDirector player;
 
     private Rigidbody _paddle;
     public int _points=0;
     private Material _material;
     private MeshRenderer _mesh;
+    private Action<InputAction.CallbackContext> _subscribe;
 
     public int A { get; private set; } = 0;
     public int B { get; private set; } = 0;
     public TMP_Text equation;
-    
+
+
     // Start is called before the first frame update
     void Start()
     {
+        _subscribe = context => OnMove(context.ReadValue<Vector2>());
         updateEquation();
         _paddle = GetComponent<Rigidbody>();
         _mesh = GetComponentInChildren<MeshRenderer>();
         _material = _mesh.material;
-        input.Current.InGame.Move.performed += context => OnMove(context.ReadValue<Vector2>());
+        input.Current.InGame.Move.performed += _subscribe;
+    }
+
+    private void OnDestroy()
+    {
+        input.Current.InGame.Move.performed -= _subscribe;
     }
 
     private void OnMove(Vector2 input)
@@ -88,7 +97,7 @@ public class PaddleControl : MonoBehaviour
         if (collision.gameObject.CompareTag("Ball"))
         {
             Rigidbody ballRb = collision.gameObject.GetComponent<Rigidbody>();
-            
+
             player.Play();
 
             if (ballRb)
@@ -119,11 +128,11 @@ public class PaddleControl : MonoBehaviour
     private IEnumerator changeColor()
     {
         _material.color = Color.green;
-        
+
         yield return new WaitForSeconds(1);
-        
+
         _material.color = Color.white;
-        
+
     }
     public void SetNewBallRigidBody()
     {
@@ -141,7 +150,7 @@ public class PaddleControl : MonoBehaviour
     }
 
     private void updateEquation()
-    { 
+    {
         A = Random.Range(1, 50);
         B = Random.Range(0, 50);
         equation.SetText( A + " + " + B + " = ?");
