@@ -18,7 +18,7 @@ public class GameController : MonoBehaviour
 
     [SerializeField] private GameObject ballObject;
 
-    private GameOverScreen gameOverScreen;
+    [SerializeField] private GameOverScreen gameOverScreen;
     [SerializeField] private PaddleControl paddleControl;
 
     // Start is called before the first frame update
@@ -37,10 +37,10 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        // if (lives == 0)
-        // {
-        //     GameOverScreen.Setup();
-        // }
+        if (lives == 0)
+        {
+            gameOverScreen.Setup(paddleControl._points);
+        }
     }
 
 
@@ -65,6 +65,7 @@ public class GameController : MonoBehaviour
         ballObject.GetComponent<MeshRenderer>().enabled = false;
         if (ballObject != null)
         {
+            
             paddleControl.ChangeUseConstantBallSpeed(false);
             ballObject.transform.position = ballStartPos;
             ballRb.velocity = Vector3.zero;

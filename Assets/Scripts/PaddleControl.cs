@@ -23,6 +23,7 @@ public class PaddleControl : MonoBehaviour
     [SerializeField] private InputContainer input;
 
     private Rigidbody _paddle;
+    public int _points=0;
 
     public int A { get; private set; } = 0;
     public int B { get; private set; } = 0;
@@ -69,6 +70,8 @@ public class PaddleControl : MonoBehaviour
             if (collision.gameObject.GetComponent<TextMeshPro>().text == answer.ToString())
             {
                 updateEquation();
+                _points++;
+                Debug.Log(_points.ToString());
             }
             collision.gameObject.GetComponent<Rigidbody>().AddForce(Random.Range(-20f, 20f), 20f, 30f, ForceMode.Impulse);
             collision.gameObject.GetComponent<Rigidbody>().AddTorque(Random.Range(-20f, 20f), 20f, 30f, ForceMode.Impulse);

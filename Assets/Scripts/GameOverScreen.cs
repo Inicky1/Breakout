@@ -3,13 +3,24 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class GameOverScreen : MonoBehaviour
 {
    public TMP_Text pointsText;
-   public  void Setup(int score)
+   public void Setup(int score)
    {
       gameObject.SetActive(true);
       pointsText.text = score.ToString() + " POINTS";
 
+   }
+
+   public void RestartButton()
+   {
+      SceneManager.LoadScene("Scenes/SampleScene");
+   }
+
+   public void PointShopButton()
+   {
+      
    }
 }

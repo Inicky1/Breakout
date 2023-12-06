@@ -1504,7 +1504,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 615862697}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1455400828}
+        m_TargetAssemblyTypeName: GameOverScreen, Assembly-CSharp
+        m_MethodName: PointShopButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &615862697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2444,6 +2456,7 @@ MonoBehaviour:
   paddleStartPos: {x: 1.28, y: 1, z: 0}
   paddle: {fileID: 2116257328}
   ballObject: {fileID: 0}
+  gameOverScreen: {fileID: 1455400828}
   paddleControl: {fileID: 0}
 --- !u!23 &745603318
 MeshRenderer:
@@ -4611,7 +4624,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1460594885}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1455400828}
+        m_TargetAssemblyTypeName: GameOverScreen, Assembly-CSharp
+        m_MethodName: RestartButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1460594885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6933,6 +6958,7 @@ MonoBehaviour:
   useConstantBallSpeed: 1
   ballRb: {fileID: 745603310}
   input: {fileID: 11400000, guid: 61edc43825ca41b769fc96a693310c2f, type: 2}
+  _points: 0
   equation: {fileID: 1732196725}
 --- !u!54 &2116257336
 Rigidbody:
