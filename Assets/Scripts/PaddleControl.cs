@@ -24,6 +24,8 @@ public class PaddleControl : MonoBehaviour
 
     private Rigidbody _paddle;
     public int _points=0;
+    private Material _material;
+    private MeshRenderer _mesh;
 
     public int A { get; private set; } = 0;
     public int B { get; private set; } = 0;
@@ -34,6 +36,8 @@ public class PaddleControl : MonoBehaviour
     {
         updateEquation();
         _paddle = GetComponent<Rigidbody>();
+        _mesh = GetComponentInChildren<MeshRenderer>();
+        _material = _mesh.material;
         input.Current.InGame.Move.performed += context => OnMove(context.ReadValue<Vector2>());
     }
 
@@ -70,6 +74,7 @@ public class PaddleControl : MonoBehaviour
             if (collision.gameObject.GetComponent<TextMeshPro>().text == answer.ToString())
             {
                 updateEquation();
+                _material.color = Color.green;
                 _points++;
                 Debug.Log(_points.ToString());
             }

@@ -6,11 +6,11 @@ using Random = System.Random;
 
 public class NumberBehavior : MonoBehaviour
 {
-    private GameObject number = GameObject.FindGameObjectWithTag("Number");
+    private GameObject number;
     // Start is called before the first frame update
     void Start()
     {
-        
+        number = GameObject.FindGameObjectWithTag("Number");
     }
 
     // Update is called once per frame
