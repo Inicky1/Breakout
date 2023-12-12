@@ -154,6 +154,14 @@ public class PaddleControl : MonoBehaviour
                         o.GetComponent<BallControl>().ExplodeOnCollision = true;
                     }
                     break;
+                case PowerUpType.Magnet:
+                    foreach (var ball in GameObject.FindGameObjectsWithTag("Ball"))
+                    {
+                        var rb = ball.GetComponent<Rigidbody>();
+                        rb.useGravity = false;
+                        rb.velocity = Vector3.zero;
+                    }
+                    break;
                 default:
                     print("TODO: Implement power up");
                     break;

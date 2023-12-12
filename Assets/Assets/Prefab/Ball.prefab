@@ -113,10 +113,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 260833b25aba56e49af0f9551de6bf63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ballVelocity: 5
-  allowContinuousMovement: 1
   explosionClip: {fileID: 8300000, guid: bd53d5a1783f540d498c8d04add0bf92, type: 3}
   explosionMixerGroup: {fileID: 4473413088089344123, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
+  input: {fileID: 11400000, guid: 61edc43825ca41b769fc96a693310c2f, type: 2}
 --- !u!135 &8134835223898937535
 SphereCollider:
   m_ObjectHideFlags: 0

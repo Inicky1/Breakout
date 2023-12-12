@@ -1,22 +1,35 @@
+using System;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.InputSystem;
 using Random = UnityEngine.Random;
 
 public class BallControl : MonoBehaviour
 {
     [SerializeField] private AudioClip explosionClip;
     [SerializeField] private AudioMixerGroup explosionMixerGroup;
+    [SerializeField] private InputContainer input;
     public float ConstantBallSpeed { get; set; } = 30f;
 
     public bool ExplodeOnCollision { get; set; }
 
     private GameController _gameController;
     private Rigidbody _rigidbody;
+    private Action<InputAction.CallbackContext> _subscribe;
 
     private void Start()
     {
+        _subscribe = _ => InitialDownPush();
         _rigidbody = gameObject.GetComponent<Rigidbody>();
         _gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
+        _rigidbody.useGravity = false;
+
+        input.Current.InGame.Shoot.performed += _subscribe;
+    }
+
+    private void OnDestroy()
+    {
+        input.Current.InGame.Shoot.performed -= _subscribe;
     }
 
     private void OnBecameInvisible()
@@ -35,7 +48,7 @@ public class BallControl : MonoBehaviour
     public void Reset()
     {
         _rigidbody.useGravity = false;
-        Invoke(nameof(InitialDownPush), 2f);
+        //Invoke(nameof(InitialDownPush), 2f);
     }
 
 
