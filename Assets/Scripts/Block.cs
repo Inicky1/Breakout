@@ -94,7 +94,7 @@ public class Block : MonoBehaviour
                     .Select(p => p.GmObject)
                     .ToList();
 
-                int i = Random.Range(0, powerUp.Count - 1);
+                int i = Random.Range(0, powerUp.Count);
                 var randomPowerUp = powerUp[i];
 
                 Spawn(randomPowerUp, pos);

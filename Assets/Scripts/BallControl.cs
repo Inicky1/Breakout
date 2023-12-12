@@ -1,13 +1,11 @@
-using System;
 using UnityEngine;
-using UnityEngine.Playables;
 using Random = UnityEngine.Random;
 
 public class BallControl : MonoBehaviour
 {
     [SerializeField] private float ballVelocity = 5f;
     [SerializeField] private bool allowContinuousMovement = true;
-    [SerializeField] private float constantBallSpeed;
+    public float ConstantBallSpeed { get; set; } = 30f;
 
 
     private GameController _gameController;
@@ -28,7 +26,7 @@ public class BallControl : MonoBehaviour
     {
         if (_gameController.UseConstantBallSpeed)
         {
-            _rigidbody.velocity = constantBallSpeed * (_rigidbody.velocity.normalized);
+            _rigidbody.velocity = ConstantBallSpeed * (_rigidbody.velocity.normalized);
         }
     }
 

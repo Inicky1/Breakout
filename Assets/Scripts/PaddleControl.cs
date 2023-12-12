@@ -122,6 +122,8 @@ public class PaddleControl : MonoBehaviour
             var powerUp = collision.gameObject.GetComponent<IPowerUp>();
             var cScale = gameObject.transform.localScale;
 
+            print("Power up: " + powerUp.Type);
+
             switch (powerUp.Type)
             {
                 case PowerUpType.ExpandPaddle:
@@ -129,6 +131,20 @@ public class PaddleControl : MonoBehaviour
                     break;
                 case PowerUpType.ShrinkPaddle:
                     gameObject.transform.localScale = new Vector3( cScale.x - 0.1f, 1, 1);
+                    break;
+                case PowerUpType.SpeedUp:
+                    foreach (var b in GameObject.FindGameObjectsWithTag("Ball"))
+                    {
+                        var control = b.GetComponent<BallControl>();
+                        control.ConstantBallSpeed += 10f;
+                    }
+                    break;
+                case PowerUpType.SpeedDown:
+                    foreach (var b in GameObject.FindGameObjectsWithTag("Ball"))
+                    {
+                        var control = b.GetComponent<BallControl>();
+                        control.ConstantBallSpeed -= 10f;
+                    }
                     break;
                 default:
                     print("TODO: Implement power up");
