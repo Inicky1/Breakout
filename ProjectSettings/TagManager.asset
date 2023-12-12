@@ -10,6 +10,7 @@ TagManager:
   - Block
   - Number
   - Paddle
+  - PowerUp
   layers:
   - Default
   - TransparentFX

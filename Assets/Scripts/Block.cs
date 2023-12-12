@@ -1,4 +1,7 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using PowerUp;
 using UnityEngine;
 using UnityEngine.Audio;
 using TMPro;
@@ -25,6 +28,10 @@ public class Block : MonoBehaviour
     private float chanceToSpawnNumber;
     [SerializeField]
     private float changeToSpawnRightNumber;
+    [SerializeField]
+    private float chanceToSpawnPowerUp;
+    [SerializeField]
+    private GameController gameController;
 
     private MeshRenderer _mesh;
     private Material _material;
@@ -64,6 +71,8 @@ public class Block : MonoBehaviour
             source.pitch = Random.Range(0.8f, 1.2f);
             source.Play();
 
+            var pos = source.transform.position;
+
             Destroy(source, explosionClip.length + 0.1f);
 
             if (Random.Range(0, 100) < chanceToSpawnNumber)
@@ -76,12 +85,30 @@ public class Block : MonoBehaviour
                 }
 
                 number.GetComponent<TMP_Text>().text = x.ToString();
-                Vector3 pos = gameObject.transform.position;
-                var inst = Instantiate(number, pos, Quaternion.identity);
+                Spawn(number, pos);
+            }
+            else if (Random.Range(0, 100) < chanceToSpawnPowerUp)
+            {
+                var powerUp = gameController.PowerUp
+                    .Where(p => p.IsEnable)
+                    .Select(p => p.GmObject)
+                    .ToList();
 
-                Destroy(inst, 10);
+                print(powerUp.Count);
+
+                int i = Random.Range(0, powerUp.Count - 1);
+                var randomPowerUp = powerUp[i];
+
+                Spawn(randomPowerUp, pos);
             }
         }
+    }
+
+    private void Spawn(GameObject gameObject, Vector3 pos)
+    {
+        var inst = Instantiate(gameObject, pos, Quaternion.identity);
+
+        Destroy(inst, 10);
     }
 
 }

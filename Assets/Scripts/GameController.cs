@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using PowerUp;
 using UnityEngine;
 using TMPro;
 using Unity.VisualScripting;
@@ -21,9 +22,15 @@ public class GameController : MonoBehaviour
     [SerializeField] private GameOverScreen gameOverScreen;
     [SerializeField] private PaddleControl paddleControl;
 
+
+    //PowerUp
+    [SerializeField] private GameObject expendPanel;
+    [SerializeField] private GameObject shrinkPanel;
+
     // Start is called before the first frame update
     private Renderer ballRenderer;
 
+    public List<PowerUpProps> PowerUp { get; } = new List<PowerUpProps>();
 
     private void Start()
     {
@@ -32,6 +39,8 @@ public class GameController : MonoBehaviour
 
         ballRenderer = GetComponent<Renderer>();
         InvokeRepeating("CheckForEndOfGame", 20, 3);
+        PowerUp.Add(new PowerUpProps(PowerUpType.ExpandPaddle, expendPanel));
+        PowerUp.Add(new PowerUpProps(PowerUpType.ShrinkPaddle, shrinkPanel));
     }
 
     // Update is called once per frame

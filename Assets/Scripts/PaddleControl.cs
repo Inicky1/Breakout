@@ -1,14 +1,10 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
+using PowerUp;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Playables;
-using UnityEngine.Serialization;
-using UnityEngine.UI;
-using UnityEngine.UIElements;
-using Object = UnityEngine.Object;
 using Random = UnityEngine.Random;
 
 public class PaddleControl : MonoBehaviour
@@ -81,7 +77,6 @@ public class PaddleControl : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        
         if (collision.gameObject.CompareTag("Number"))
         {
             var answer = A + B;
@@ -102,7 +97,7 @@ public class PaddleControl : MonoBehaviour
             collision.gameObject.GetComponent<Rigidbody>().AddForce(Random.Range(-20f, 20f), 20f, 30f, ForceMode.Impulse);
             collision.gameObject.GetComponent<Rigidbody>().AddTorque(Random.Range(-20f, 20f), 20f, 30f, ForceMode.Impulse);
         }
-        if (collision.gameObject.CompareTag("Ball"))
+        else if (collision.gameObject.CompareTag("Ball"))
         {
             Rigidbody ballRb = collision.gameObject.GetComponent<Rigidbody>();
             
@@ -132,6 +127,21 @@ public class PaddleControl : MonoBehaviour
                 
                 ballRb.AddForce(ballRb.velocity.magnitude * reflectingForce * direction, ForceMode.VelocityChange);
 
+            }
+        }
+        else if (collision.gameObject.CompareTag("PowerUp"))
+        {
+            var powerUp = collision.gameObject.GetComponent<IPowerUp>();
+            var cScale = gameObject.transform.localScale;
+
+            switch (powerUp.Type)
+            {
+                case PowerUpType.ExpandPaddle:
+                    gameObject.transform.localScale = new Vector3( cScale.x + 0.1f, 1, 1);
+                    break;
+                case PowerUpType.ShrinkPaddle:
+                    gameObject.transform.localScale = new Vector3( cScale.x - 0.1f, 1, 1);
+                    break;
             }
         }
     }
