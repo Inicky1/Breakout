@@ -5,6 +5,7 @@ using PowerUp;
 using UnityEngine;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
 public class GameController : MonoBehaviour
@@ -19,7 +20,7 @@ public class GameController : MonoBehaviour
 
     [SerializeField] private GameObject ballObject;
 
-    [SerializeField] private GameOverScreen gameOverScreen;
+
     [SerializeField] private PaddleControl paddleControl;
 
 
@@ -48,7 +49,8 @@ public class GameController : MonoBehaviour
     {
         if (lives == 0)
         {
-            gameOverScreen.Setup(paddleControl._points);
+            PlayerPrefs.SetInt("Points",paddle.points);
+            SceneManager.LoadScene("Scenes/Scene2");
         }
     }
 
