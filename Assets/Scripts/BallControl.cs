@@ -4,13 +4,11 @@ using Random = UnityEngine.Random;
 
 public class BallControl : MonoBehaviour
 {
-    [SerializeField] private float ballVelocity = 5f;
-    [SerializeField] private bool allowContinuousMovement = true;
     [SerializeField] private AudioClip explosionClip;
     [SerializeField] private AudioMixerGroup explosionMixerGroup;
     public float ConstantBallSpeed { get; set; } = 30f;
 
-    public bool ExplodeOnCollision { get; set; } = false;
+    public bool ExplodeOnCollision { get; set; }
 
     private GameController _gameController;
     private Rigidbody _rigidbody;

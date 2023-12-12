@@ -12,7 +12,6 @@ public class GameController : MonoBehaviour
 {
     [SerializeField] private int lives = 3;
 
-    [SerializeField] private TMP_Text livesTextInfo;
     [SerializeField] private GameObject ballPrefab;
     [SerializeField] private Vector3 ballStartPos = new Vector3(-0.67f, 22f, 0f);
     [SerializeField] private Vector3 paddleStartPos = new Vector3(1.28f, 1f, 0f);
@@ -20,6 +19,8 @@ public class GameController : MonoBehaviour
 
     [SerializeField] private GameOverScreen gameOverScreen;
     [SerializeField] private PaddleControl paddleControl;
+    [SerializeField] private TMP_Text scoreText;
+    [SerializeField] private TMP_Text livesText;
 
 
     //PowerUp
@@ -40,6 +41,9 @@ public class GameController : MonoBehaviour
 
     private void Start()
     {
+        scoreText.text = paddle.points.ToString("0000");
+        livesText.text = "Life Left: " + lives;
+
         paddleControl = FindObjectOfType<PaddleControl>();
 
         ballRenderer = GetComponent<Renderer>();
@@ -57,9 +61,12 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        scoreText.text = paddle.points.ToString("0000");
+
         if (lives == 0)
         {
             PlayerPrefs.SetInt("Points",paddle.points);
+
             SceneManager.LoadScene("Scenes/Scene2");
         }
     }
@@ -67,6 +74,7 @@ public class GameController : MonoBehaviour
     public void AddLife()
     {
         lives++;
+        livesText.text = "Life Left: " + lives;
     }
 
     public void BallLost(GameObject ball)
@@ -87,6 +95,7 @@ public class GameController : MonoBehaviour
     private void LooseALife()
     {
         lives--;
+        livesText.text = "Life Left: " + lives;
         // paddle.GetComponent<MeshRenderer>().enabled = false;
         if (lives > 0)
         {
