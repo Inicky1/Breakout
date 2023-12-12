@@ -6,5 +6,11 @@ namespace PowerUp
     {
         ExpandPaddle,
         ShrinkPaddle,
+        Explotion,
+        Magnet,
+        OneUp,
+        ExtraBall,
+        SpeedUp,
+        SpeedDown,
     }
 }

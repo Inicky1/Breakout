@@ -11,6 +11,7 @@ TagManager:
   - Number
   - Paddle
   - PowerUp
+  - GameControler
   layers:
   - Default
   - TransparentFX

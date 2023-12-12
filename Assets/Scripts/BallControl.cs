@@ -1,25 +1,43 @@
+using System;
 using UnityEngine;
 using UnityEngine.Playables;
+using Random = UnityEngine.Random;
 
 public class BallControl : MonoBehaviour
 {
     [SerializeField] private float ballVelocity = 5f;
     [SerializeField] private bool allowContinuousMovement = true;
+    [SerializeField] private float constantBallSpeed;
 
-    [SerializeField] private PlayableDirector player;
-    // Start is called before the first frame update
-    void Start()
+
+    private GameController _gameController;
+    private Rigidbody _rigidbody;
+
+    private void Start()
     {
-        //var ball = GetComponent<Rigidbody>();
-        //ball.useGravity = false;
+        _rigidbody = gameObject.GetComponent<Rigidbody>();
+        _gameController = GameObject.FindWithTag("GameController").GetComponent<GameController>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnBecameInvisible()
     {
-
+        _gameController.BallLost(gameObject);
     }
-    
+
+    private void FixedUpdate()
+    {
+        if (_gameController.UseConstantBallSpeed)
+        {
+            _rigidbody.velocity = constantBallSpeed * (_rigidbody.velocity.normalized);
+        }
+    }
+
+    public void Reset()
+    {
+        _rigidbody.useGravity = false;
+        Invoke(nameof(InitialDownPush), 2f);
+    }
+
 
     public void OnCollisionEnter(Collision other)
     {
@@ -27,6 +45,12 @@ public class BallControl : MonoBehaviour
         var audioSource = gameObject.GetComponent<AudioSource>();
         audioSource.pitch = Random.Range(0.9f, 1.1f);
         audioSource.Play();
-        player.Play();
+    }
+
+
+    public void InitialDownPush()
+    {
+        _rigidbody.useGravity = true;
+        _rigidbody.AddForce(new Vector2(Random.Range(-0.5f, 0.5f), -1f).normalized * 5f, ForceMode.Impulse);
     }
 }
