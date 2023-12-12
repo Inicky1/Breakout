@@ -6656,9 +6656,10 @@ MonoBehaviour:
   maxReflectionAngleDeg: 90
   ballRb: {fileID: 745603310}
   input: {fileID: 11400000, guid: 61edc43825ca41b769fc96a693310c2f, type: 2}
+  gameController: {fileID: 326869010}
   player: {fileID: 1527072666}
   sparks: {fileID: 700732105000234389, guid: 4705fec0b6f3f8f46b86ad52e48ddab8, type: 3}
-  _points: 0
+  points: 0
   equation: {fileID: 1732196725}
 --- !u!54 &2116257336
 Rigidbody:

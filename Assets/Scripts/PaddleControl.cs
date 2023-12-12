@@ -16,6 +16,7 @@ public class PaddleControl : MonoBehaviour
     [SerializeField] private float maxReflectionAngleDeg = 75f;
     [SerializeField] private Rigidbody ballRb;
     [SerializeField] private InputContainer input;
+    [SerializeField] private GameController gameController;
 
     [SerializeField] private PlayableDirector player;
 
@@ -145,6 +146,9 @@ public class PaddleControl : MonoBehaviour
                         var control = b.GetComponent<BallControl>();
                         control.ConstantBallSpeed -= 10f;
                     }
+                    break;
+                case PowerUpType.OneUp:
+                    gameController.AddLife();
                     break;
                 default:
                     print("TODO: Implement power up");

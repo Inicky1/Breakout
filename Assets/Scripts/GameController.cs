@@ -64,6 +64,11 @@ public class GameController : MonoBehaviour
         }
     }
 
+    public void AddLife()
+    {
+        lives++;
+    }
+
     public void BallLost(GameObject ball)
     {
         //Count the balls
