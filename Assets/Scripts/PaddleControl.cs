@@ -22,7 +22,7 @@ public class PaddleControl : MonoBehaviour
     public ParticleSystem sparks;
 
     private Rigidbody _paddle;
-    public int _points=0;
+    public int points=0;
     private Material _material;
     private MeshRenderer _mesh;
     private Action<InputAction.CallbackContext> _subscribe;
@@ -73,7 +73,7 @@ public class PaddleControl : MonoBehaviour
                 updateEquation();
                 collision.gameObject.GetComponent<TextMeshPro>().color = Color.green;
                 StartCoroutine(changeColor(true));
-                _points++;
+                points++;
 
             }
             else
