@@ -143,6 +143,8 @@ public class PaddleControl : MonoBehaviour
                     gameObject.transform.localScale = new Vector3( cScale.x - 0.1f, 1, 1);
                     break;
             }
+
+            Destroy(collision.gameObject);
         }
     }
 
