@@ -115,7 +115,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ballVelocity: 5
   allowContinuousMovement: 1
-  constantBallSpeed: 30
+  explosionClip: {fileID: 8300000, guid: bd53d5a1783f540d498c8d04add0bf92, type: 3}
+  explosionMixerGroup: {fileID: 4473413088089344123, guid: 6fbbae01641b0da58b4f85220a176e50, type: 2}
 --- !u!135 &8134835223898937535
 SphereCollider:
   m_ObjectHideFlags: 0

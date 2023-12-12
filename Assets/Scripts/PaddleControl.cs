@@ -136,19 +136,23 @@ public class PaddleControl : MonoBehaviour
                 case PowerUpType.SpeedUp:
                     foreach (var b in GameObject.FindGameObjectsWithTag("Ball"))
                     {
-                        var control = b.GetComponent<BallControl>();
-                        control.ConstantBallSpeed += 10f;
+                        b.GetComponent<BallControl>().ConstantBallSpeed += 10f;
                     }
                     break;
                 case PowerUpType.SpeedDown:
                     foreach (var b in GameObject.FindGameObjectsWithTag("Ball"))
                     {
-                        var control = b.GetComponent<BallControl>();
-                        control.ConstantBallSpeed -= 10f;
+                        b.GetComponent<BallControl>().ConstantBallSpeed -= 10f;
                     }
                     break;
                 case PowerUpType.OneUp:
                     gameController.AddLife();
+                    break;
+                case PowerUpType.Explotion:
+                    foreach (var o in GameObject.FindGameObjectsWithTag("Ball"))
+                    {
+                        o.GetComponent<BallControl>().ExplodeOnCollision = true;
+                    }
                     break;
                 default:
                     print("TODO: Implement power up");
