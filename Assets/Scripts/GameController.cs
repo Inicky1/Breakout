@@ -40,6 +40,7 @@ public class GameController : MonoBehaviour
     
     private void Start()
     {
+
         scoreText.text = paddle.points.ToString("0000");
         livesText.text = "Life Left: " + lives;
         paddleControl = FindObjectOfType<PaddleControl>();
