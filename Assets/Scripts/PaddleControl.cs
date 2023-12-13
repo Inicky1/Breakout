@@ -185,7 +185,7 @@ public class PaddleControl : MonoBehaviour
 
         yield return new WaitForSeconds(1);
 
-        _material.color = Color.white;
+        _material.color = Color.magenta;
 
     }
 

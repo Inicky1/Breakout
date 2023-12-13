@@ -40,7 +40,7 @@ public class GameController : MonoBehaviour
     
     private void Start()
     {
-
+        PlayerPrefs.DeleteAll();
         scoreText.text = paddle.points.ToString("0000");
         livesText.text = "Life Left: " + lives;
         paddleControl = FindObjectOfType<PaddleControl>();
@@ -98,6 +98,10 @@ public class GameController : MonoBehaviour
     {
         lives--;
         livesText.text = "Life Left: " + lives;
+        foreach (var b in GameObject.FindGameObjectsWithTag("Ball"))
+        {
+            b.GetComponent<BallControl>().ConstantBallSpeed = 30f;
+        }
         // paddle.GetComponent<MeshRenderer>().enabled = false;
         if (lives > 0)
         {
