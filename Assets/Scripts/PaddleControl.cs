@@ -75,6 +75,9 @@ public class PaddleControl : MonoBehaviour
                 collision.gameObject.GetComponent<TextMeshPro>().color = Color.green;
                 StartCoroutine(changeColor(true));
                 points++;
+                
+                Vector3 pos = gameObject.transform.position;
+                Instantiate(sparks, pos, Quaternion.identity);
 
             }
             else
@@ -90,9 +93,6 @@ public class PaddleControl : MonoBehaviour
         {
             Rigidbody ballRb = collision.gameObject.GetComponent<Rigidbody>();
             
-            Vector3 pos = gameObject.transform.position;
-            Instantiate(sparks, pos, Quaternion.identity);
-            sparks.Play();
             player.Play();
 
             if (ballRb)

@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.InputSystem;
+using UnityEngine.Playables;
 using Random = UnityEngine.Random;
 
 public class BallControl : MonoBehaviour
@@ -16,6 +17,8 @@ public class BallControl : MonoBehaviour
     private GameController _gameController;
     private Rigidbody _rigidbody;
     private Action<InputAction.CallbackContext> _subscribe;
+    [SerializeField] private PlayableDirector player;
+
 
     private void Start()
     {
@@ -54,6 +57,7 @@ public class BallControl : MonoBehaviour
 
     public void OnCollisionEnter(Collision other)
     {
+        player.Play();
         if (other.gameObject.CompareTag("Block"))
         {
             if (ExplodeOnCollision)
@@ -66,6 +70,7 @@ public class BallControl : MonoBehaviour
         var audioSource = gameObject.GetComponent<AudioSource>();
         audioSource.pitch = Random.Range(0.9f, 1.1f);
         audioSource.Play();
+        
     }
 
 
