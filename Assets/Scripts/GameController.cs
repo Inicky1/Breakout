@@ -1,12 +1,11 @@
-using System;
-using System.Collections;
+
 using System.Collections.Generic;
 using PowerUp;
 using UnityEngine;
 using TMPro;
-using Unity.VisualScripting;
+
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
+
 
 public class GameController : MonoBehaviour
 {
@@ -38,12 +37,11 @@ public class GameController : MonoBehaviour
 
     public List<PowerUpProps> PowerUp { get; } = new List<PowerUpProps>();
     public bool UseConstantBallSpeed { get; private set; } = true;
-
+    
     private void Start()
     {
         scoreText.text = paddle.points.ToString("0000");
         livesText.text = "Life Left: " + lives;
-
         paddleControl = FindObjectOfType<PaddleControl>();
 
         ballRenderer = GetComponent<Renderer>();
@@ -65,9 +63,11 @@ public class GameController : MonoBehaviour
 
         if (lives == 0)
         {
-            PlayerPrefs.SetInt("Points",paddle.points);
-
+            int oldPoints = PlayerPrefs.GetInt("Points");
+            PlayerPrefs.SetInt("Points",paddle.points + oldPoints);
+            PlayerPrefs.Save();
             SceneManager.LoadScene("Scenes/Scene2");
+
         }
     }
 

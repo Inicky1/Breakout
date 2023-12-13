@@ -11,17 +11,17 @@ public class GameOverScreen : MonoBehaviour
 
     private void Start()
     {
-        int points = PlayerPrefs.GetInt("Points");
+        var points = PlayerPrefs.GetInt("Points");
         pointsText.text = points.ToString() + " POINTS";
     }
 
     public void RestartButton()
     {
-        Debug.Log("button working");
         SceneManager.LoadScene(0);
     }
 
     public void PointShopButton()
     {
+        SceneManager.LoadScene(2);
     }
 }

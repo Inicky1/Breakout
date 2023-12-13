@@ -35,6 +35,7 @@ public class BallControl : MonoBehaviour
     private void OnBecameInvisible()
     {
         _gameController.BallLost(gameObject);
+
     }
 
     private void FixedUpdate()
