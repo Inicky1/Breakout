@@ -12,6 +12,7 @@ TagManager:
   - Paddle
   - PowerUp
   - GameControler
+  - BlockDaddy
   layers:
   - Default
   - TransparentFX

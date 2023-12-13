@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using PowerUp;
 using UnityEngine;
 using TMPro;
-
+using Unity.VisualScripting;
 using UnityEngine.SceneManagement;
 
 
@@ -40,7 +40,6 @@ public class GameController : MonoBehaviour
     
     private void Start()
     {
-        PlayerPrefs.DeleteAll();
         scoreText.text = paddle.points.ToString("0000");
         livesText.text = "Life Left: " + lives;
         paddleControl = FindObjectOfType<PaddleControl>();
@@ -130,6 +129,10 @@ public class GameController : MonoBehaviour
 
     public void CheckForEndOfGame()
     {
+        if (GameObject.FindGameObjectsWithTag("Block") == null)
+        {
+            SceneManager.LoadScene(2);
+        }
     }
 
     public void SpawnNewBall()

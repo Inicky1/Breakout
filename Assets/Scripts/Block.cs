@@ -7,6 +7,7 @@ using UnityEngine.Audio;
 using TMPro;
 using Random = UnityEngine.Random;
 
+
 public class Block : MonoBehaviour
 {
 
@@ -32,6 +33,7 @@ public class Block : MonoBehaviour
     private float chanceToSpawnPowerUp;
     [SerializeField]
     private GameController gameController;
+    
 
     private MeshRenderer _mesh;
     private Material _material;
@@ -72,6 +74,8 @@ public class Block : MonoBehaviour
             source.Play();
 
             var pos = source.transform.position;
+
+            gameController.CheckForEndOfGame();
 
             Destroy(source, explosionClip.length + 0.1f);
 
