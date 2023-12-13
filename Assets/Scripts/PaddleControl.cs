@@ -36,6 +36,7 @@ public class PaddleControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         _subscribe = context => OnMove(context.ReadValue<Vector2>());
         updateEquation();
         _paddle = GetComponent<Rigidbody>();

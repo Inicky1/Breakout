@@ -1,12 +1,11 @@
-using System;
-using System.Collections;
+
 using System.Collections.Generic;
 using PowerUp;
 using UnityEngine;
 using TMPro;
-using Unity.VisualScripting;
+
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
+
 
 public class GameController : MonoBehaviour
 {
@@ -38,14 +37,15 @@ public class GameController : MonoBehaviour
 
     public List<PowerUpProps> PowerUp { get; } = new List<PowerUpProps>();
     public bool UseConstantBallSpeed { get; private set; } = true;
-
+    
     private void Start()
     {
+        PlayerPrefs.DeleteAll();
         scoreText.text = paddle.points.ToString("0000");
         livesText.text = "Life Left: " + lives;
-
         paddleControl = FindObjectOfType<PaddleControl>();
-
+        PlayerPrefs.SetInt("isSpeedDown",1);
+        PlayerPrefs.SetInt("isShrinkPaddle",1);
         ballRenderer = GetComponent<Renderer>();
         InvokeRepeating("CheckForEndOfGame", 20, 3);
         PowerUp.Add(new PowerUpProps(PowerUpType.ExpandPaddle, expendPanel));
@@ -53,7 +53,7 @@ public class GameController : MonoBehaviour
         PowerUp.Add(new PowerUpProps(PowerUpType.Magnet, magnetPanel));
         PowerUp.Add(new PowerUpProps(PowerUpType.Explotion, explodePanel));
         PowerUp.Add(new PowerUpProps(PowerUpType.OneUp, oneUpPanel));
-        PowerUp.Add(new PowerUpProps(PowerUpType.ExtraBall, extraBallPanel));
+      //  PowerUp.Add(new PowerUpProps(PowerUpType.ExtraBall, extraBallPanel));
         PowerUp.Add(new PowerUpProps(PowerUpType.SpeedUp, fastBallPanel));
         PowerUp.Add(new PowerUpProps(PowerUpType.SpeedDown, slowBallPanel));
     }
@@ -65,9 +65,11 @@ public class GameController : MonoBehaviour
 
         if (lives == 0)
         {
-            PlayerPrefs.SetInt("Points",paddle.points);
-
+            int oldPoints = PlayerPrefs.GetInt("Points");
+            PlayerPrefs.SetInt("Points",paddle.points + oldPoints);
+            PlayerPrefs.Save();
             SceneManager.LoadScene("Scenes/Scene2");
+
         }
     }
 
