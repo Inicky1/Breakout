@@ -40,10 +40,12 @@ public class GameController : MonoBehaviour
     
     private void Start()
     {
+        PlayerPrefs.DeleteAll();
         scoreText.text = paddle.points.ToString("0000");
         livesText.text = "Life Left: " + lives;
         paddleControl = FindObjectOfType<PaddleControl>();
-
+        PlayerPrefs.SetInt("isSpeedDown",1);
+        PlayerPrefs.SetInt("isShrinkPaddle",1);
         ballRenderer = GetComponent<Renderer>();
         InvokeRepeating("CheckForEndOfGame", 20, 3);
         PowerUp.Add(new PowerUpProps(PowerUpType.ExpandPaddle, expendPanel));
@@ -51,7 +53,7 @@ public class GameController : MonoBehaviour
         PowerUp.Add(new PowerUpProps(PowerUpType.Magnet, magnetPanel));
         PowerUp.Add(new PowerUpProps(PowerUpType.Explotion, explodePanel));
         PowerUp.Add(new PowerUpProps(PowerUpType.OneUp, oneUpPanel));
-        PowerUp.Add(new PowerUpProps(PowerUpType.ExtraBall, extraBallPanel));
+      //  PowerUp.Add(new PowerUpProps(PowerUpType.ExtraBall, extraBallPanel));
         PowerUp.Add(new PowerUpProps(PowerUpType.SpeedUp, fastBallPanel));
         PowerUp.Add(new PowerUpProps(PowerUpType.SpeedDown, slowBallPanel));
     }
